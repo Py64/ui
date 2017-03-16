@@ -48,7 +48,7 @@ generic:
   test: Test
   testing: Testowanie
   to: Do
-  total: Total
+  total: Łącznie
   type: Typ
   unknown: Unknown
   uuid: UUID
@@ -77,9 +77,9 @@ accountsPage:
       kind: Kind
       username: Nazwa użytkownika
       name: Nazwa
-      identity: Identity
+      identity: Tożsamość
       noData: Nie ma jeszcze żadnych kont
-      noName: None
+      noName: Żadna
   new:
     header: Dodaj konto
     form:
@@ -87,7 +87,7 @@ accountsPage:
         labelText: Nazwa używana do logowania
         placeholder: "np. jkowalski"
       password:
-        labelText: Password
+        labelText: Hasło
       name:
         labelText: Nazwa
         placeholder: "np. Jan Kowalski"
@@ -99,22 +99,22 @@ accountsPage:
         placeholder: "np. To jest konto dla Jana Kowalskiego"
 
 apiPage:
-  header: Environment API Keys
-  actionButton: Add Environment API Key
+  header: Klucze API Środowiska
+  actionButton: Dodaj Klucz API Środowiska
   content: |
     Environment API keys are tied to this specific Environment (<code>{displayName}</code>) and can only manipulate resources within there.  Other accounts with access to this Environment can also manage these keys.
   currentEndpoint: 'Endpoint:'
   legacyEndpoint: 'Endpoint (v1):'
   table:
-    state: State
-    name: Name
-    description: Description
-    publicValue: Access Key
-    created: Created
-    noData: There are no keys for this Environment yet.
-    noName: None
-    noDescription: None
-    noPublicValue: No public value
+    state: Stan
+    name: Nazwa
+    description: Opis
+    publicValue: Klucz dostępu
+    created: Utworzony
+    noData: Nie ma jeszcze żadnych kluczy dla tego Środowiska.
+    noName: Żaden
+    noDescription: Żaden
+    noPublicValue: Brak publicznej wartości
   account:
     header: Account API Keys
     buttonText: Add Account API Key
@@ -125,10 +125,10 @@ apiPage:
       noData: There are no keys for this Account yet.
 
 auditLogsPage:
-  header: Audit Logs
+  header: Dziennik zdarzeń
   form:
     eventType:
-      placeholder: Event Type
+      placeholder: Rodzaj zdarzenia
     resourceType:
       placeholder: "Resource Type:"
       dropdownPlaceholder: 'Select a Resource Type:'
@@ -141,18 +141,18 @@ auditLogsPage:
       placeholder: "Auth Type:"
       dropdownPlaceholder: 'Select an Auth Type:'
       dropdownList:
-    clearButtonText: Clear Filters
-    searchButtonText: Search
+    clearButtonText: Usuń filtry
+    searchButtonText: Szukaj
   table:
-    time: Time
-    eventType: Event Type
-    description: Description
-    environment: Environment
+    time: Data
+    eventType: Rodzaj zdarzenia
+    description: Opis
+    environment: Środowisko
     resourceTypeId: "Resource Type:ID"
-    identity: Identity
+    identity: Tożsamość
     authIp: "Auth & IP"
-  first: First Page
-  next: Next Page
+  first: Pierwsza strona
+  next: Następna strona
 
 authPage:
   shibboleth:
@@ -183,17 +183,17 @@ authPage:
       unrestricted: "{appName} is configured to allow access to any {providerName} user."
       authenticated:
         header:
-          text: Authentication
+          text: Autentyfikacja
           helpText: "To change the configured Shibboleth application, disable access control below and then set it up again."
       disableAccess:
-        header: "Danger Zone&trade;"
-        warning: '<b class="text-danger">Caution:</b> Disabling access control will give complete control over {appName} to anyone that can reach this page or the API.'
-        confirmDisable: "Are you sure?  Click again to really disable access control"
+        header: "Strefa zagrożenia&trade;"
+        warning: '<b class="text-danger">Ostrzeżenie:</b> Disabling access control will give complete control over {appName} to anyone that can reach this page or the API.'
+        confirmDisable: "Jesteś pewny?  Kliknij ponownie by naprawdę wyłączyć kontrolę dostępu"
         disable: Disable access control
-      groupsField: 'Groups:'
-      displayName: 'Display Name:'
-      userName: 'Username:'
-      userId: 'User ID:'
+      groupsField: 'Grupy:'
+      displayName: 'Nazwa wyświetlana:'
+      userName: 'Nazwa użytkownika:'
+      userId: 'ID użytkownika:'
     disabled:
       header: '1. Configure Shibboleth Account'
       label: "{providerName} is not configured"
